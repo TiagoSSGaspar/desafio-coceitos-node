@@ -83,7 +83,7 @@ app.post("/repositories/:id/like", (request, response) => {
   const index = repositories.findIndex( i => i.id === id);
 
   if(index < 0){
-    return response.status(400).json({error:"Erro se vira tio"})
+    return response.status(400).json({error:"Algo deu errado, talvez você não possa realizar essa operação!"})
   }
 
   repositories.map(
